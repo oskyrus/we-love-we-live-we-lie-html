@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Bebas Neue', sans-serif;
+            text-align: center;
+        }
+        #text {
+            font-size: 24px;
+            text-align: center;
+        }
+        #image {
+            display: none;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="text">
+        <p>We live</p>
+    </div>
+    <div id="image">
+        <img src="https://ih0.redbubble.net/image.5225084192.5486/raf,360x360,075,t,fafafa:ca443f4786.jpg" alt="Obrazek">
+    </div>
+
+    <script>
+        setTimeout(function () {
+            document.getElementById("text").innerHTML = "<p>We love</p>";
+            setTimeout(function () {
+                document.getElementById("text").innerHTML = "<p>We lie</p>";
+                setTimeout(function () {
+                    document.getElementById("text").style.display = "none";
+                    document.getElementById("image").style.display = "block";
+                }, 1000); // Po 2 sekundach pokaż obrazek
+            }, 1000); // Po 2 sekundach zmień napis na "We lie"
+        }, 1000); // Po 2 sekundach zmień napis na "We live"
+    </script>
+</body>
+</html>
